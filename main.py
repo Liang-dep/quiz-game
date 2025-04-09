@@ -1,3 +1,5 @@
+name = input("Enter your name: ")
+
 questions = {
     "What is the capital of France?": "Paris",
     "What is 2 + 2?": "4",
@@ -14,4 +16,11 @@ for question, answer in questions.items():
     else:
         print("Wrong!")
 
-print(f"You scored {score} out of {len(questions)}.")
+print(f"{name}, you scored {score} out of {len(questions)}.")
+
+if score == len(questions):
+    print("Excellent! 🎉 You got all answers right!")
+elif score >= len(questions) // 2:
+    print("Good job! 👍 But there's room for improvement.")
+else:
+    print("Keep practicing! 💪 You'll get better.")
