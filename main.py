@@ -10,7 +10,7 @@ for question, answer in questions.items():
     user_answer = input(question + " ")
     if user_answer.strip().lower() == answer.lower():
         print("Correct!")
-        score = 1
+        score += 1
     else:
         print("Wrong!")
 
